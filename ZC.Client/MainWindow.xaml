@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
-        
+        <Button x:Name="btn_start" Content="开始监测" Margin="0,31,28,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" Height="26" Click="btn_start_Click"/>
+        <TextBox x:Name="tb_time" Height="26" Margin="0,31,158,0" TextWrapping="Wrap" VerticalContentAlignment="Center"  Text="5" VerticalAlignment="Top" HorizontalAlignment="Right" Width="52"/>
+        <Label x:Name="label" Content="刷新时间（秒）：" HorizontalAlignment="Right" Margin="0,31,210,0" VerticalAlignment="Top"/>
+        <RichTextBox x:Name="rtb_show" HorizontalAlignment="Right" Height="453" Margin="0,72,28,0" VerticalAlignment="Top" Width="282">
+        </RichTextBox>
+        <DataGrid x:Name="dg_result" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="657" Height="453" />
+
     </Grid>
 </Window>

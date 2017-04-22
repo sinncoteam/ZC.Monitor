@@ -92,8 +92,9 @@ namespace ZC.Utils
         /// </summary>
         /// <param name="sheetName">excel工作薄sheet的名称</param>
         /// <param name="isFirstRowColumn">第一行是否是DataTable的列名</param>
+        /// <param name="firstDataRow"></param>
         /// <returns>返回的DataTable</returns>
-        public DataTable ExcelToDataTable(string sheetName, bool isFirstRowColumn)
+        public DataTable ExcelToDataTable(string sheetName, bool isFirstRowColumn, int firstDataRow  = 0)
         {
             ISheet sheet = null;
             DataTable data = new DataTable();
@@ -142,7 +143,12 @@ namespace ZC.Utils
                     }
                     else
                     {
-                        startRow = sheet.FirstRowNum;
+                        for(int i = 0; i<cellCount; i++)
+                        {
+                            DataColumn column = new DataColumn("p"+i);
+                            data.Columns.Add(column);
+                        }
+                        startRow = firstDataRow;
                     }
 
                     //最后一列的标号
@@ -156,7 +162,10 @@ namespace ZC.Utils
                         for (int j = row.FirstCellNum; j < cellCount; ++j)
                         {
                             if (row.GetCell(j) != null) //同理，没有数据的单元格都默认是null
+                            {
                                 dataRow[j] = row.GetCell(j).ToString();
+                            }
+                            
                         }
                         data.Rows.Add(dataRow);
                     }

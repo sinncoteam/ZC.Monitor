@@ -127,9 +127,15 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="Config\Appsettings.config" />
-    <None Include="Config\log4net.config" />
-    <None Include="Config\ViCore.config" />
+    <None Include="Config\Appsettings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\ViCore.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -141,6 +147,12 @@
     <Resource Include="Resource\Image\logo.ico" />
     <Resource Include="Resource\Image\notify.ico" />
     <Resource Include="Resource\Image\splash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZC.Utils\ZC.Utils.csproj">
+      <Project>{b2fcc603-0b89-4966-ab4e-cf7dfe1fc62f}</Project>
+      <Name>ZC.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
