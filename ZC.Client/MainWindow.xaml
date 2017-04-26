@@ -1,18 +1,23 @@
-﻿<Window x:Class="ZC.Client.MainWindow"
+﻿<Window x:Class="ZC.Client.MainWindow" 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZC.Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="联康洪检测统计分析软件" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <Button x:Name="btn_start" Content="开始监测" Margin="0,31,28,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" Height="26" Click="btn_start_Click"/>
         <TextBox x:Name="tb_time" Height="26" Margin="0,31,158,0" TextWrapping="Wrap" VerticalContentAlignment="Center"  Text="5" VerticalAlignment="Top" HorizontalAlignment="Right" Width="52"/>
         <Label x:Name="label" Content="刷新时间（秒）：" HorizontalAlignment="Right" Margin="0,31,210,0" VerticalAlignment="Top"/>
         <RichTextBox x:Name="rtb_show" HorizontalAlignment="Right" Height="453" Margin="0,72,28,0" VerticalAlignment="Top" Width="282">
         </RichTextBox>
-        <DataGrid x:Name="dg_result" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="657" Height="453" />
+        <Label x:Name="label1" Content="总合格数：" HorizontalAlignment="Left" Margin="74,72,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="tb_total_yes" HorizontalAlignment="Left" Height="23" Margin="149,74,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label1_Copy" Content="总合格率：" HorizontalAlignment="Left" Margin="290,72,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="tb_total_yesper" HorizontalAlignment="Left" Height="23" Margin="365,74,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Grid Name="g_chart" HorizontalAlignment="Left" Height="384" Margin="44,141,0,0" VerticalAlignment="Top" Width="606"/>
+        <!--<DataGrid x:Name="dg_result" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="657" Height="453" />-->
 
     </Grid>
 </Window>
