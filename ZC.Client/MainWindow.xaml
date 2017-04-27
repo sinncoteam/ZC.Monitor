@@ -5,18 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZC.Client"
         mc:Ignorable="d"
-        Title="联康洪检测统计分析软件" Height="600" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="联康洪检测统计分析软件" Height="700" Width="1300" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Closed="Window_Closed">
     <Grid>
         <Button x:Name="btn_start" Content="开始监测" Margin="0,31,28,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" Height="26" Click="btn_start_Click"/>
         <TextBox x:Name="tb_time" Height="26" Margin="0,31,158,0" TextWrapping="Wrap" VerticalContentAlignment="Center"  Text="5" VerticalAlignment="Top" HorizontalAlignment="Right" Width="52"/>
         <Label x:Name="label" Content="刷新时间（秒）：" HorizontalAlignment="Right" Margin="0,31,210,0" VerticalAlignment="Top"/>
-        <RichTextBox x:Name="rtb_show" HorizontalAlignment="Right" Height="453" Margin="0,72,28,0" VerticalAlignment="Top" Width="282">
+        <RichTextBox x:Name="rtb_show" HorizontalAlignment="Right" Height="568" Margin="0,72,28,0" VerticalAlignment="Top" Width="282">
         </RichTextBox>
-        <Label x:Name="label1" Content="总合格数：" HorizontalAlignment="Left" Margin="74,72,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="tb_total_yes" HorizontalAlignment="Left" Height="23" Margin="149,74,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label1_Copy" Content="总合格率：" HorizontalAlignment="Left" Margin="290,72,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="tb_total_yesper" HorizontalAlignment="Left" Height="23" Margin="365,74,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Grid Name="g_chart" HorizontalAlignment="Left" Height="384" Margin="44,141,0,0" VerticalAlignment="Top" Width="606"/>
+        <Label x:Name="label1" Content="总合格数：" HorizontalAlignment="Left" Margin="60,92,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="tb_total_yes" HorizontalAlignment="Left" Height="23" Margin="136,94,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label1_Copy" Content="总合格率：" HorizontalAlignment="Left" Margin="276,92,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="tb_total_yesper" HorizontalAlignment="Left" Height="23" Margin="352,94,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Grid Name="g_chart" HorizontalAlignment="Left" Height="499" Margin="44,141,0,0" VerticalAlignment="Top" Width="913">
+            <!--<vc:Chart  xmlns:vc="clr-namespace:Visifire.Charts;assembly=WPFVisifire.Charts"  
+    Width="490" Height="290" Theme="Theme1" ShadowEnabled="True" CornerRadius="7,7,0,0" BorderThickness="0.5"       
+    BorderBrush="Gray" AnimatedUpdate="true" >
+
+                <vc:Chart.Titles>
+                    <vc:Title Text="Athens 2004 Olympics"/>
+                </vc:Chart.Titles>
+
+                <vc:Chart.PlotArea>
+                    <vc:PlotArea CornerRadius="0,14,0,0" BorderThickness="0,1,1,0" BorderColor="LightGray" />
+                </vc:Chart.PlotArea>
+
+                <vc:Chart.AxesX>
+                    <vc:Axis Title="Country">
+                        <vc:Axis.AxisLabels>
+                            <vc:AxisLabels Interval="1"/>
+                        </vc:Axis.AxisLabels>
+                    </vc:Axis>
+                </vc:Chart.AxesX>
+
+                <vc:Chart.AxesY>
+                    <vc:Axis AxisMinimum="0" AxisMaximum="60" Title="Gold Medals Won"/>
+                </vc:Chart.AxesY>
+
+                <vc:Chart.Series>
+                    <vc:DataSeries RenderAs="Column" LabelEnabled="True">
+                        <vc:DataSeries.DataPoints>
+                            <vc:DataPoint AxisXLabel="USA" YValue="50"/>
+                            <vc:DataPoint AxisXLabel="China" YValue="35"/>
+                            <vc:DataPoint AxisXLabel="Russia" YValue="27"/>
+                            <vc:DataPoint AxisXLabel="Australia" YValue="17"/>
+                            <vc:DataPoint AxisXLabel="Japan" YValue="16"/>
+                        </vc:DataSeries.DataPoints>
+                    </vc:DataSeries>
+                    <vc:DataSeries RenderAs="Column"  LabelEnabled="True">
+                        <vc:DataSeries.DataPoints>
+                            <vc:DataPoint AxisXLabel="USA" YValue="40"/>
+                            <vc:DataPoint AxisXLabel="China" YValue="25"/>
+                            <vc:DataPoint AxisXLabel="Russia" YValue="47"/>
+                            <vc:DataPoint AxisXLabel="Australia" YValue="17"/>
+                            <vc:DataPoint AxisXLabel="Japan" YValue="16"/>
+                        </vc:DataSeries.DataPoints>
+                    </vc:DataSeries>
+                </vc:Chart.Series>
+            </vc:Chart>-->
+        </Grid>
         <!--<DataGrid x:Name="dg_result" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="657" Height="453" />-->
 
     </Grid>
